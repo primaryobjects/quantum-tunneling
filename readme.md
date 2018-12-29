@@ -1,6 +1,8 @@
 Quantum Tunneling
 =================
 
+#### Kory Becker - December 29, 2018
+
 ## Synopsis
 
 This document is an analysis of the probabilities of quantum tunneling to occur at various semiconductor barrier sizes with consideration for the current manufactoring process.
