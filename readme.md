@@ -5,7 +5,7 @@ Quantum Tunneling
 
 ## Synopsis
 
-This document is an analysis of the probabilities of quantum tunneling to occur at various semiconductor barrier sizes with consideration for the current manufactoring process.
+This document is an analysis of the probabilities of quantum tunneling to occur at various semiconductor barrier sizes with consideration for the current manufacturing process.
 
 The analaysis includes a select data-set of 9 examples by year and semiconductor barrier size. The results of the analysis demonstrate insignificant effects from quantum tunneling for recent years. However, a significant increase in quantum tunneling probability within semiconductors begins to appear at year 2025.
 
@@ -29,7 +29,7 @@ In order for quantum tunneling to occur, a system must contain a tiny sized part
 
 ## Data Set
 
-The data source for this analysis consists of a select set of years and semiconductor barrier sizes for the current manufactoring process. Using this data, we can calculate the probabilities for quantum tunneling to occur by using Engel's probability function.
+The data source for this analysis consists of a select set of years and semiconductor barrier sizes for the current manufacturing process. Using this data, we can calculate the probabilities for quantum tunneling to occur by using Engel's probability function.
 
 ```{r, echo=F}
 data <- data.frame(list(year = c(1989, 2001, 2006, 2010, 2014, 2017, 2019, 2021, 2025),
@@ -85,7 +85,7 @@ We can see in the above chart that the proability for quantum tunneling to occur
 
 ## Conclusion
 
-The key question in quantum effects of classical computer transistors is how soon could quantum tunneling become a large enough problem to prevent computers from operating efficiently. According to the above estimated probability data, based upon the current semidonductor manufactoring process and future expections, it appears around the year 2025 computing devices may begin to experience an unreasonable amount of data loss from components built with classical transistors. This data loss could be expected to be in the range of 2.68%.
+The key question in quantum effects of classical computer transistors is how soon could quantum tunneling become a large enough problem to prevent computers from operating efficiently. According to the above estimated probability data, based upon the current semidonductor manufacturing process and future expections, it appears around the year 2025 computing devices may begin to experience an unreasonable amount of data loss from components built with classical transistors. This data loss could be expected to be in the range of 2.68%.
 
 Note, the above data is based upon estimates and should not be considered as a given prediction of the state of quantum tunneling on computing technology.
 
