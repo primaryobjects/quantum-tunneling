@@ -1,14 +1,5 @@
----
-title: "Quantum Tunneling"
-author: "Kory Becker"
-date: "December 29, 2018"
-output: html_document
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-library(ggplot2)
-```
+Quantum Tunneling
+=================
 
 ## Synopsis
 
@@ -85,6 +76,8 @@ g <- g + xlab('Year')
 g <- g + ylab('Probability (log10)')
 g
 ```
+
+![Quantum tunneling probability](images/plot.png)
 
 We can see in the above chart that the proability for quantum tunneling to occur remains relatively insignificant through the year 2021, with a probability of just `r prob[prob$Year==2021,]$Probability` or `r prob[prob$Year==2021,]$Probability * 100`%. However, at `r max(prob$Year)` and beyond, we can see a distinctly different percentage at `r prob[prob$Year==2025,]$Probability` or a `r round(prob[prob$Year==2025,]$Probability * 100, 2)`% chance for quantum tunneling to occur. In realistic terms, this could indicate a potential data loss that may exceed reasonable thresholds in computing.
 
