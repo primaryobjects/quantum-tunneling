@@ -79,11 +79,11 @@ g
 
 ![Quantum tunneling probability](images/plot.png)
 
-We can see in the above chart that the proability for quantum tunneling to occur remains relatively insignificant through the year 2021, with a probability of just `r prob[prob$Year==2021,]$Probability` or `r prob[prob$Year==2021,]$Probability * 100`%. However, at `r max(prob$Year)` and beyond, we can see a distinctly different percentage at `r prob[prob$Year==2025,]$Probability` or a `r round(prob[prob$Year==2025,]$Probability * 100, 2)`% chance for quantum tunneling to occur. In realistic terms, this could indicate a potential data loss that may exceed reasonable thresholds in computing.
+We can see in the above chart that the proability for quantum tunneling to occur remains relatively insignificant through the year 2021, with a probability of just 1.930892310^{-16} or 1.930892310^{-14}%. However, at 2025 and beyond, we can see a distinctly different percentage at `r prob[prob$Year==2025,]$Probability` or a 2.68% chance for quantum tunneling to occur. In realistic terms, this could indicate a potential data loss that may exceed reasonable thresholds in computing.
 
 ## Conclusion
 
-The key question in quantum effects of classical computer transistors is how soon could quantum tunneling become a large enough problem to prevent computers from operating efficiently. According to the above estimated probability data, based upon the current semidonductor manufactoring process and future expections, it appears around the year `r max(prob$Year)` computing devices may begin to experience an unreasonable amount of data loss from components built with classical transistors. This data loss could be expected to be in the range of `r round(prob[prob$Year==2025,]$Probability * 100, 2)`%.
+The key question in quantum effects of classical computer transistors is how soon could quantum tunneling become a large enough problem to prevent computers from operating efficiently. According to the above estimated probability data, based upon the current semidonductor manufactoring process and future expections, it appears around the year 2025 computing devices may begin to experience an unreasonable amount of data loss from components built with classical transistors. This data loss could be expected to be in the range of 2.68%.
 
 Note, the above data is based upon estimates and should not be considered as a given prediction of the state of quantum tunneling on computing technology.
 

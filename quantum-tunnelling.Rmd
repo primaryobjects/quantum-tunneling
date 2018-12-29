@@ -73,7 +73,7 @@ prob
 
 A plot of the probabilities for quantum tunneling occurring at various semiconductor barrier sizes is shown below.
 
-```{r, echo=F}
+```{r, echo=F, warning=F}
 g <- ggplot(data = data, aes(x = prob$Year, y = prob$Probability, colour='red'))
 g <- g + geom_line(size=2, show.legend=F)
 g <- g + scale_y_log10()
