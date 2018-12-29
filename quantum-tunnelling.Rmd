@@ -1,5 +1,5 @@
 ---
-title: "Quantum Tunneling Probability"
+title: "Quantum Tunneling"
 author: "Kory Becker"
 date: "December 29, 2018"
 output: html_document
