@@ -79,7 +79,7 @@ g
 
 ![Quantum tunneling probability](images/plot.png)
 
-We can see in the above chart that the proability for quantum tunneling to occur remains relatively insignificant through the year 2021, with a probability of just 1.930892310^{-16} or 1.930892310^{-14}%. However, at 2025 and beyond, we can see a distinctly different percentage at `r prob[prob$Year==2025,]$Probability` or a 2.68% chance for quantum tunneling to occur. In realistic terms, this could indicate a potential data loss that may exceed reasonable thresholds in computing.
+We can see in the above chart that the proability for quantum tunneling to occur remains relatively insignificant through the year 2021, with a probability of just 1.930892310^{-16} or 1.930892310^{-14}%. However, at 2025 and beyond, we can see a distinctly different percentage at 0.0268272 or a 2.68% chance for quantum tunneling to occur. In realistic terms, this could indicate a potential data loss that may exceed reasonable thresholds in computing.
 
 ## Conclusion
 
