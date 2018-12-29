@@ -7,7 +7,7 @@ Quantum Tunneling
 
 This document is an analysis of the probabilities of quantum tunneling to occur at various semiconductor barrier sizes with consideration for the current manufacturing process.
 
-The analysis includes a select data-set of 9 examples by year and semiconductor barrier size. The results of the analysis demonstrate insignificant effects from quantum tunneling for recent years. However, a significant increase in quantum tunneling probability within semiconductors begins to appear at year 2025.
+The analysis includes a select data-set of 9 examples by year and semiconductor barrier size. The results of the analysis demonstrate insignificant effects from quantum tunneling for recent years. However, a probability of 2.68% for quantum tunneling to occur within semiconductors begins to appear at year 2025.
 
 ## Background
 
