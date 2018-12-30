@@ -1,5 +1,5 @@
 ---
-title: "Quantum Tunneling"
+title: "Quantum Tunneling Probability for Transistors"
 author: "Kory Becker"
 date: "December 29, 2018"
 output: html_document
@@ -12,7 +12,7 @@ library(ggplot2)
 
 ## Synopsis
 
-This document is an analysis of the probabilities of quantum tunneling to occur at various semiconductor barrier sizes with consideration for the current manufacturing process.
+This document is an analysis of the probability of quantum tunneling to occur at various transistor semiconductor barrier sizes with consideration for the current manufacturing process.
 
 The analysis includes a select data-set of 9 examples by year and semiconductor barrier size. The results of the analysis demonstrate insignificant effects from quantum tunneling for recent years. However, a probability of 2.68% for quantum tunneling to occur within semiconductors begins to appear at year 2025.
 
