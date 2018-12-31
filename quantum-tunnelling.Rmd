@@ -1,7 +1,7 @@
 ---
 title: "Quantum Tunneling Probability for Transistors"
 author: "Kory Becker"
-date: "December 29, 2018"
+date: "December 31, 2018"
 output: html_document
 ---
 
@@ -14,7 +14,7 @@ library(ggplot2)
 
 This document is an analysis of the probability of quantum tunneling to occur at various transistor semiconductor barrier sizes with consideration for the current manufacturing process.
 
-The analysis includes a select data-set of 9 examples by year and semiconductor barrier size. The results of the analysis demonstrate insignificant effects from quantum tunneling for recent years. However, a probability of 2.68% for quantum tunneling to occur within semiconductors begins to appear at year 2025.
+The analysis includes a select data-set of 9 examples by year and semiconductor barrier size. The result of the analysis demonstrates insignificant effects from quantum tunneling for recent years. However, a quantum tunelling probability of 2.68% begins to appear at year 2025.
 
 ## Background
 
@@ -74,7 +74,23 @@ prob
 A plot of the probabilities for quantum tunneling occurring at various semiconductor barrier sizes is shown below.
 
 ```{r, echo=F, warning=F}
-g <- ggplot(data = data, aes(x = prob$Year, y = prob$Probability, colour='red'))
+g <- ggplot(data = data, aes(x = prob$Year, y = prob$Probability * 100, colour='red'))
+g <- g + geom_line(size=2, show.legend=F)
+g <- g + scale_x_continuous(breaks = seq(from=min(prob$Year), to=max(prob$Year), by=5))
+g <- g + guides(fill=FALSE)
+g <- g + theme(plot.title = element_text(hjust = 0.5))
+g <- g + ggtitle('Quantum Tunneling Probability')
+g <- g + xlab('Year')
+g <- g + ylab('Probability %')
+g
+```
+
+We can see in the above chart that the probability for quantum tunneling to occur remains relatively insignificant through the year 2021, with a probability of just `r format(prob[prob$Year==2021,]$Probability * 100, scientific=T)`% through the year 2021. However, at `r max(prob$Year)` and beyond, we can see a distinctly different percentage with a `r round(prob[prob$Year==2025,]$Probability * 100, 2)`% chance for quantum tunneling to occur. In realistic terms, this could indicate a potential data loss that may exceed reasonable thresholds in computing.
+
+A smoothed version of the chart is displayed below, also indicating the rise in quantum tunelling probability occuring after the year 2021.
+
+```{r, echo=F, warning=F}
+g <- ggplot(data = data, aes(x = prob$Year, y = prob$Probability * 100, colour='red'))
 g <- g + geom_line(size=2, show.legend=F)
 g <- g + scale_y_log10()
 g <- g + scale_x_continuous(breaks = seq(from=min(prob$Year), to=max(prob$Year), by=5))
@@ -86,11 +102,9 @@ g <- g + ylab('Probability (log10)')
 g
 ```
 
-We can see in the above chart that the probability for quantum tunneling to occur remains relatively insignificant through the year 2021, with a probability of just `r prob[prob$Year==2021,]$Probability` or `r prob[prob$Year==2021,]$Probability * 100`%. However, at `r max(prob$Year)` and beyond, we can see a distinctly different percentage at `r prob[prob$Year==2025,]$Probability` or a `r round(prob[prob$Year==2025,]$Probability * 100, 2)`% chance for quantum tunneling to occur. In realistic terms, this could indicate a potential data loss that may exceed reasonable thresholds in computing.
-
 ## Conclusion
 
-The key question in quantum effects of classical computer transistors is how soon could quantum tunneling become a large enough problem to prevent computers from operating efficiently. According to the above estimated probability data, based upon the current semiconductor manufacturing process and future expectations, it appears around the year `r max(prob$Year)` computing devices may begin to experience an unreasonable amount of data loss from components built with classical transistors. This data loss could be expected to be in the range of `r round(prob[prob$Year==2025,]$Probability * 100, 2)`%.
+One of the key questions with regard to quantum effects of classical computer transistors, is to determine how soon the effects from quantum tunneling could become a significant enough problem to prevent computers from operating efficiently. According to the above estimated probability data, based upon the current semiconductor manufacturing process and future expectations, it appears around the year `r max(prob$Year)` computing devices may begin to experience an unreasonable amount of data loss from components built with classical transistors. This data loss could be expected to be in the range of `r round(prob[prob$Year==2025,]$Probability * 100, 2)`%.
 
 Note, the above data is based upon estimates and should not be considered as a given prediction of the state of quantum tunneling on computing technology.
 
