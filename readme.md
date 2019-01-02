@@ -7,7 +7,7 @@ Quantum Tunneling Probability for Transistors
 
 This document is an analysis of the probability of quantum tunneling to occur at various transistor semiconductor barrier sizes with consideration for the current manufacturing process.
 
-The analysis includes a select data-set of 9 examples by year and semiconductor barrier size. The result of the analysis demonstrates insignificant effects from quantum tunneling for recent years. However, a quantum tunelling probability of 2.68% begins to appear at year 2025.
+The analysis includes a select data-set of 9 examples by year and semiconductor barrier size. The result of the analysis demonstrates insignificant effects from quantum tunneling for recent years. However, a quantum tunneling probability of 2.68% begins to appear at year 2025.
 
 ## Background
 
@@ -82,7 +82,7 @@ g
 
 We can see in the above chart that the probability for quantum tunneling to occur remains relatively insignificant through the year 2021, with a probability of just1.930892e-14% through the year 2021. However, at 2025 and beyond, we can see a distinctly different percentage with a 2.68% chance for quantum tunneling to occur. In realistic terms, this could indicate a potential data loss that may exceed reasonable thresholds in computing.
 
-A smoothed version of the chart is displayed below, also indicating the rise in quantum tunelling probability occuring after the year 2021.
+A smoothed version of the chart is displayed below, also indicating the rise in quantum tunneling probability occuring after the year 2021.
 
 ```{r, echo=F, warning=F}
 g <- ggplot(data = data, aes(x = prob$Year, y = prob$Probability * 100, colour='red'))
